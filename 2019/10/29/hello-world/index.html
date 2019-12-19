@@ -32,7 +32,7 @@
     mediumzoom: false,
     lazyload: false,
     pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    comments: {"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},
     algolia: {
       appID: '',
       apiKey: '',
@@ -248,6 +248,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -388,6 +389,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '975b9246bee592864abb',
+      clientSecret: '3694a2cd46293480d9870a8a0a1221f1f6d001fd',
+      repo: 'https://libmelo.github.io/',
+      owner: 'libmelo',
+      admin: ['libmelo'],
+      id: '33b2ff4762371bd225f22e68738e8d5c',
+        language: 'en',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
