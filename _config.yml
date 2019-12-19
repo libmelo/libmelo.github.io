@@ -3,11 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+<<<<<<< HEAD
 title: Libmelo's Blog
 subtitle: A novel website
 description: Python and others
 keywords: Python Data anaylsis
 author: Lm
+=======
+title: Libmelo
+subtitle:
+description:
+keywords:
+author: John Doe
+>>>>>>> 3f37ec3e11894b4bd5f1fee860a7be4bc8db950c
 language: en
 timezone:
 
